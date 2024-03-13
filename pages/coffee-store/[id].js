@@ -1,9 +1,16 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const CoffeeStore = () => {
   const router = useRouter()
 
-  return <div>coffee store page: {router.query.id}</div>
+  return (
+    <div>
+      coffee store page: {router.query.id}
+      <Link href='/'>Back to home</Link>
+      <Link href='/coffee-store/dynamic'>Go to page dynamic</Link>
+    </div>
+  )
 }
 
 export default CoffeeStore
